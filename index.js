@@ -9,20 +9,34 @@ document.querySelectorAll('.star-rating:not(.readonly) label').forEach(star => {
 });
 
 // Submit and calculate score - Created w/ help of ClaudeAI
-document.getElementById('submit-btn').addEventListener('click', function () {
-    const ratings = {
-        accessibility: Number(document.querySelector('input[name="rating_accessibility"]:checked')?.value),
-        social_equity: Number(document.querySelector('input[name="rating_social_equity"]:checked')?.value),
-        connection_to_nature: Number(document.querySelector('input[name="rating_connection_to_nature"]:checked')?.value),
-        community_consideration: Number(document.querySelector('input[name="rating_community_consideration"]:checked')?.value),
-        park_features: Number(document.querySelector('input[name="rating_park_features"]:checked')?.value),
-    };
+document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById('submit-btn').addEventListener('click', function (e) {
+            e.preventDefault();
+        const parkName = document.getElementById('park-name').value.trim();
 
-    if (Object.values(ratings).some(v => !v)) {
-        alert('Please rate all categories before submitting.');
+    if (!parkName) {
+        alert('Please enter the name of the greenspace.');
         return;
     }
 
+    const getRating = (name) => {
+        const el = document.querySelector(`input[name="${name}"]:checked`);
+        return el ? Number(el.value) : null;
+    };
+
+    const ratings = {
+        accessibility: getRating("rating_accessibility"),
+        social_equity: getRating("rating_social_equity"),
+        connection_to_nature: getRating("rating_connection_to_nature"),
+        community_consideration: getRating("rating_community_consideration"),
+        park_features: getRating("rating_park_features"),
+    };
+    
+
+    if (Object.values(ratings).some(v => v === null)) {
+        alert('Please rate all categories before submitting.');
+        return;
+    }
     const weights = {
         accessibility: 0.250,
         social_equity: 0.252,
@@ -35,6 +49,10 @@ document.getElementById('submit-btn').addEventListener('click', function () {
         return sum + ratings[key] * weights[key];
     }, 0);
 
+    localStorage.setItem('ratings', JSON.stringify(ratings));
+
+    localStorage.setItem('parkName', parkName);
     localStorage.setItem('finalScore', weightedAvg.toFixed(2));
     window.location.href = 'results.html';
+});
 });

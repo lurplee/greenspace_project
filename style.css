@@ -1,0 +1,60 @@
+body {
+    background-color: rgb(206, 236, 206);
+    font-family: Poppins;
+    
+}
+
+h1 {
+    padding-top:20px;
+    margin-bottom:5px;
+    font-family: Poppins;
+    text-align: center;
+}
+
+p{
+    margin-top:0;
+    text-align:center;
+}
+
+.form-container {
+    background-color: white;
+    margin-left:15%;
+    padding:0.5%;
+    margin-right:15%;
+    margin-bottom:10%;
+    
+}
+
+.form-container p{
+    text-align:left;
+    margin-top:0;
+}
+
+.form-container h2 {
+    text-align: left;
+    margin-bottom: 0;
+}
+
+.star-rating {
+    direction: rtl;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.star-rating input {
+    display: none;
+}
+
+.star-rating label {
+    color: #ddd;
+    font-size: 24px;
+    padding: 0 2px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.star-rating label:hover,
+.star-rating label:hover~label,
+.star-rating input:checked~label {
+    color: #ffc107;
+}

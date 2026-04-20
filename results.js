@@ -20,7 +20,7 @@ document.getElementById('progress-fill').style.width = percent + "%";
 // Breakdown (you need to STORE ratings first — see next section)
 const breakdownData = JSON.parse(localStorage.getItem('ratings'));
 
-const weights = {
+const weights = { 
     accessibility: 0.25,
     social_equity: 0.252,
     connection_to_nature: 0.175,

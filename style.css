@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(206, 236, 206);
+    background: linear-gradient(white,rgb(183, 222, 183));
     font-family: Poppins;
     
 }
@@ -9,6 +9,7 @@ h1 {
     margin-bottom:5px;
     font-family: Poppins;
     text-align: center;
+    color:#166534;
 }
 
 p{
@@ -56,12 +57,15 @@ p{
     transition: all 0.2s ease;
 }
 
-.star-rating label:hover,
-.star-rating label:hover~label,
 .star-rating input:checked~label {
     color: #ffc107;
 }
 
+
+.star-rating label:hover,
+.star-rating label:hover~label {
+    color: #ffbf0080;
+}
 .btn{
 padding:15px 20px;
 border: 2px solid black;

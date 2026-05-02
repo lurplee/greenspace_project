@@ -1,0 +1,136 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>GreenRater</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+
+</head>
+
+<body>
+    <br>
+    <h1>GreenRater</h1>
+    <p> Rate your local greenspace based on weighted criteria</p>
+    <br>
+
+    <div class=form-container>
+    
+    <div class="name-container">
+        <h2>Name of Greenspace</h2>
+    
+    <form action="/home" method="POST">
+        <input type="text" name="park_name" placeholder="e.g. Freedom Park" required>
+    </div>
+    
+        <div class="rating-card p-4">
+            <h2>Accessibility (25%)</h2>
+            <p>The ability to reach and use greenspaces; includes physical infrastructure barriers</p>
+
+            
+            <div class="star-rating animated-stars">
+                <input type="radio" id="acc_star5" name="rating_accessibility" value="5">
+                <label for="acc_star5" class="bi bi-star-fill"></label>
+                <input type="radio" id="acc_star4" name="rating_accessibility" value="4">
+                <label for="acc_star4" class="bi bi-star-fill"></label>
+                <input type="radio" id="acc_star3" name="rating_accessibility" value="3">
+                <label for="acc_star3" class="bi bi-star-fill"></label>
+                <input type="radio" id="acc_star2" name="rating_accessibility" value="2">
+                <label for="acc_star2" class="bi bi-star-fill"></label>
+                <input type="radio" id="acc_star1" name="rating_accessibility" value="1">
+                <label for="acc_star1" class="bi bi-star-fill"></label>
+            </div>
+          </div>
+        
+        <!-- Social Equity -->
+        <div class="rating-card p-4">
+            <h2>Social Equity (25.2%)</h2>
+            <p>The fair and inclusive distribution of the greenspace among neighborhoods and demographic groups</p>
+            <div class="star-rating animated-stars">
+                <input type="radio" id="seq_star5" name="rating_social_equity" value="5">
+                <label for="seq_star5" class="bi bi-star-fill"></label>
+                <input type="radio" id="seq_star4" name="rating_social_equity" value="4">
+                <label for="seq_star4" class="bi bi-star-fill"></label>
+                <input type="radio" id="seq_star3" name="rating_social_equity" value="3">
+                <label for="seq_star3" class="bi bi-star-fill"></label>
+                <input type="radio" id="seq_star2" name="rating_social_equity" value="2">
+                <label for="seq_star2" class="bi bi-star-fill"></label>
+                <input type="radio" id="seq_star1" name="rating_social_equity" value="1">
+                <label for="seq_star1" class="bi bi-star-fill"></label>
+            </div>
+          </div>
+        
+        <!-- Connection to Nature -->
+        <div class="rating-card p-4">
+            <h2>Connection to Nature (17.5%)</h2>
+            <p>The degree of "greenness" the greenspace offers; includes grass and tree coverage, wildlife exposure and
+                conservation</p>
+            <div class="star-rating animated-stars">
+                <input type="radio" id="ctn_star5" name="rating_connection_to_nature" value="5">
+                <label for="ctn_star5" class="bi bi-star-fill"></label>
+                <input type="radio" id="ctn_star4" name="rating_connection_to_nature" value="4">
+                <label for="ctn_star4" class="bi bi-star-fill"></label>
+                <input type="radio" id="ctn_star3" name="rating_connection_to_nature" value="3">
+                <label for="ctn_star3" class="bi bi-star-fill"></label>
+                <input type="radio" id="ctn_star2" name="rating_connection_to_nature" value="2">
+                <label for="ctn_star2" class="bi bi-star-fill"></label>
+                <input type="radio" id="ctn_star1" name="rating_connection_to_nature" value="1">
+                <label for="ctn_star1" class="bi bi-star-fill"></label>
+            </div>
+          </div>
+        
+        <!-- Community Consideration -->
+        <div class="rating-card p-4">
+            <h2>Community Consideration (16.3%)</h2>
+            <p>The degree of engagement with the surrounding community; includes the frequency of community events, integration
+                of community input</p>
+            <div class="star-rating animated-stars">
+                <input type="radio" id="cc_star5" name="rating_community_consideration" value="5">
+                <label for="cc_star5" class="bi bi-star-fill"></label>
+                <input type="radio" id="cc_star4" name="rating_community_consideration" value="4">
+                <label for="cc_star4" class="bi bi-star-fill"></label>
+                <input type="radio" id="cc_star3" name="rating_community_consideration" value="3">
+                <label for="cc_star3" class="bi bi-star-fill"></label>
+                <input type="radio" id="cc_star2" name="rating_community_consideration" value="2">
+                <label for="cc_star2" class="bi bi-star-fill"></label>
+                <input type="radio" id="cc_star1" name="rating_community_consideration" value="1">
+                <label for="cc_star1" class="bi bi-star-fill"></label>
+            </div>
+          </div>
+        
+        <!-- Park Features & Amenities -->
+        <div class="rating-card p-4">
+            <h2>Park Features & Amenities (15.9%)</h2>
+            <p>The quality and variety of the greenspace's amenities; includes bathrooms, benches, sports/exercise areas, trails
+                and other usable public infrastructure</p>
+            <div class="star-rating animated-stars">
+                <input type="radio" id="pf_star5" name="rating_park_features" value="5">
+                <label for="pf_star5" class="bi bi-star-fill"></label>
+                <input type="radio" id="pf_star4" name="rating_park_features" value="4">
+                <label for="pf_star4" class="bi bi-star-fill"></label>
+                <input type="radio" id="pf_star3" name="rating_park_features" value="3">
+                <label for="pf_star3" class="bi bi-star-fill"></label>
+                <input type="radio" id="pf_star2" name="rating_park_features" value="2">
+                <label for="pf_star2" class="bi bi-star-fill"></label>
+                <input type="radio" id="pf_star1" name="rating_park_features" value="1">
+                <label for="pf_star1" class="bi bi-star-fill"></label>
+            </div>
+          </div>
+        
+         <input type="submit" value="Submit">
+    </form>
+    
+
+
+    </div>
+</body>
+
+</html>
+

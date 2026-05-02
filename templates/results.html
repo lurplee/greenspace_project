@@ -1,0 +1,77 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenRater Results</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+
+
+<body>
+    <div class="heading">
+    <h1>GreenRater</h1>
+    <p> Rate your local greenspace based on weighted criteria</p>
+    </div>
+
+<div class="score-container">
+    <div class="left-column">
+        <div class="score-card">
+            <h1>{{park_name}}</h1>
+
+            <div class="score-title">
+            <p>Weighted Final Score</p>
+            </div>
+
+            <div class="score-main">
+                <div class="score-number">{{score}}</div>
+                <div class="score-max">/5</div>
+            </div>
+
+            <div id="score-badge" class="score-badge">{{rating_category}}</div>
+
+            <div class="progress-bar">
+                <meter value="{{score}}" max="5" low = "1.5" high = "3.5"optimum="5"></meter>
+            </div>
+        
+        </div>
+        <a href="home">Rate Another Greenspace</a>
+    </div>
+
+<div class="breakdown-container">
+    <h3 class="breakdown-title">SCORE BREAKDOWN</h3>
+
+    <div id="breakdown">
+        <h2>Accessibility</h2>
+        <meter value="{{score_breakdown['accessibility']}}"></meter>
+
+        <h2>Connection to Nature</h2>
+        <meter value="{{score_breakdown['nature']}}"></meter>
+
+        <h2>Equity</h2>
+        <meter value="{{score_breakdown['equity']}}"></meter>
+
+        <h2>Community Consideration</h2>
+        <meter value="{{score_breakdown['community']}}"></meter>
+
+        <h2>Park Features & Amenities</h2>
+        <meter value="{{score_breakdown['features']}}"></meter>
+</div>
+       
+
+    </div>
+</div>
+
+</div>
+
+</body>
+
+</html>

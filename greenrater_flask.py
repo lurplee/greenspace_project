@@ -55,8 +55,8 @@ def create_app(test_config=None):
         rating_category =main.rating_category(score)
         return render_template("results.html", park_name=park_name, score_breakdown=score_breakdown,score=score, rating_category = rating_category)
     @app.route('/')
-        def index():
-            return redirect(url_for('home'))
+    def index():
+        return redirect(url_for('home'))
 
 
     return app

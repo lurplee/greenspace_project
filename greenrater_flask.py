@@ -10,7 +10,7 @@ from flask import request, render_template, redirect, url_for, session
 def create_app(test_config=None):
     app = Flask(__name__, instance_relative_config=True)
     app.config.from_mapping(
-        SECRET_KEY='dev',
+        SECRET_KEY=os.environ.get('SECRET_KEY', 'dev'),
         DATABASE=os.path.join(app.instance_path, 'flaskr.sqlite'),
     )
 
@@ -54,6 +54,9 @@ def create_app(test_config=None):
         score = session["score"]
         rating_category =main.rating_category(score)
         return render_template("results.html", park_name=park_name, score_breakdown=score_breakdown,score=score, rating_category = rating_category)
+    @app.route('/')
+    def index():
+        return redirect(url_for('home'))
 
 
     return app

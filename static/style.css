@@ -343,3 +343,133 @@ meter {
 .score-container a:hover {
     background-color: #0f4d27;
 }
+
+
+
+
+
+
+@media screen and (max-width: 768px) {
+
+    /* Navbar */
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 0;
+    }
+
+    .navbar h1 {
+        float: none;
+        margin: 10px 0;
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .navbar a,
+    .dropdown,
+    .dropdown .dropbtn {
+        float: none;
+        width: 100%;
+        text-align: center;
+        padding: 14px 0;
+    }
+
+    .dropdown-content {
+        width: 100%;
+        left: 0;
+    }
+
+    /* Heading */
+    .heading h1 {
+        font-size: 32px;
+        padding-top: 30px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .heading p {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 30px;
+    }
+
+    /* Main containers */
+    .form-container,
+    .score-container {
+        width: 92%;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .score-card,
+    .breakdown-container {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* Portfolio */
+    .portfolio-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .portfolio-item {
+        width: 85%;
+    }
+
+    /* Rating cards */
+    .rating-card {
+        padding: 20px;
+    }
+
+    .rating-card h2 {
+        font-size: 22px;
+    }
+
+    .rating-card p {
+        font-size: 14px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    /* Stars */
+    .star-rating {
+        font-size: 26px;
+        flex-wrap: wrap;
+        gap: 2px;
+    }
+
+    /* Score section */
+    .score-main {
+        font-size: 42px;
+    }
+
+    .score-max {
+        font-size: 22px;
+    }
+
+    .score-container h1 {
+        font-size: 30px;
+        padding-bottom: 20px;
+    }
+
+    /* Buttons */
+    .general-button input,
+    .score-container a {
+        width: 100%;
+        font-size: 18px;
+        padding: 16px;
+    }
+
+    /* Meters */
+    meter,
+    .progress-bar meter {
+        width: 100%;
+    }
+
+    /* Prevent overflow */
+    * {
+        max-width: 100%;
+    }
+}

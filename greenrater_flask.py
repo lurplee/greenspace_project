@@ -22,7 +22,7 @@ def create_app(test_config=None):
     os.makedirs(app.instance_path, exist_ok=True)
 
     # HOME PAGE
-    @app.route('/', methods = ["GET", "POST"])
+    @app.route("/", methods = ["GET", "POST"])
     def index():
 
         if request.method == "POST":
@@ -54,9 +54,6 @@ def create_app(test_config=None):
         score = session["score"]
         rating_category =main.rating_category(score)
         return render_template("results.html", park_name=park_name, score_breakdown=score_breakdown,score=score, rating_category = rating_category)
-    @app.route('/')
-    def index():
-        return redirect(url_for('home'))
 
 
     return app

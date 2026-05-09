@@ -55,6 +55,11 @@ def create_app(test_config=None):
         rating_category =main.rating_category(score)
         return render_template("results.html", park_name=park_name, score_breakdown=score_breakdown,score=score, rating_category = rating_category)
 
+    @app.route('/portfolio', methods =["GET", "POST"])
+    def portfolio():
+        return render_template("portfolio.html")
+
+
 
     return app
 if __name__ == '__main__':

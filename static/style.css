@@ -10,6 +10,33 @@ body {
     background-repeat: no-repeat;
 }
 
+.portfolio-item{
+    color:#093902;
+    background-color: rgb(247, 255, 247);
+    padding:5%;
+    text-align:center;
+    margin:auto;
+    width:20%;
+    border-radius:20px;
+    border:solid rgb(207, 207, 207) 1px;
+}
+
+.portfolio-container a{
+    text-decoration: none;
+}
+.portfolio-container{
+    align-content:center;
+    display:flex;
+    flex-direction:row;
+    gap:10px;
+}
+
+.portfolio-item:hover{
+    background-color: #093902;
+    color:white;
+    transition: background-color 0.3s ease-in-out;
+    transition: color 0.3s ease-in-out;
+}
 /* Navbar container */
 .navbar {
     overflow: hidden;

@@ -22,8 +22,8 @@ def create_app(test_config=None):
     os.makedirs(app.instance_path, exist_ok=True)
 
     # HOME PAGE
-    @app.route('/home', methods = ["GET", "POST"])
-    def home():
+    @app.route('/', methods = ["GET", "POST"])
+    def index():
 
         if request.method == "POST":
             park_name = request.form.get("park_name")
@@ -45,7 +45,7 @@ def create_app(test_config=None):
 
 
             return redirect(url_for("results"))
-        return render_template("home.html")
+        return render_template("index.html")
 
     @app.route('/results', methods =["GET", "POST"])
     def results():

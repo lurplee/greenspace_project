@@ -15,23 +15,42 @@
 
 </head>
 
-<body>
-    <br>
+<div class="navbar">
     <h1>GreenRater</h1>
-    <p> Rate your local greenspace based on weighted criteria</p>
+    <a href="#home">Home</a>
+    <a href="#news">Portfolio</a>
+    <div class="dropdown">
+        <button class="dropbtn">Portfolio Drop
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="#">Home</a>
+            <a href="#">Link 2</a>
+            <a href="#">Sources</a>
+        </div>
+    </div>
+</div>
+
+<body>
+    <div class="heading">
+    <h1>Rate Your Greenspace</h1>
+   <i><p> Rate your local greenspace based on weighted criteria</p></i>
     <br>
+    </div>
 
     <div class=form-container>
     
     <div class="name-container">
         <h2>Name of Greenspace</h2>
     
+    
     <form action="/" method="POST">
         <input type="text" name="park_name" placeholder="e.g. Freedom Park" required>
     </div>
+    <br>
     
-        <div class="rating-card p-4">
-            <h2>Accessibility (25%)</h2>
+        <div class="rating-card">
+            <h2 style="color:rgb(185, 120, 0)">Accessibility (25%)</h2>
             <p>The ability to reach and use greenspaces; includes physical infrastructure barriers</p>
 
             
@@ -50,8 +69,8 @@
           </div>
         
         <!-- Social Equity -->
-        <div class="rating-card p-4">
-            <h2>Social Equity (25.2%)</h2>
+        <div class="rating-card">
+            <h2 style="color:rgb(91, 0, 171)">Social Equity (25.2%)</h2>
             <p>The fair and inclusive distribution of the greenspace among neighborhoods and demographic groups</p>
             <div class="star-rating animated-stars">
                 <input type="radio" id="seq_star5" name="rating_social_equity" value="5">
@@ -68,8 +87,8 @@
           </div>
         
         <!-- Connection to Nature -->
-        <div class="rating-card p-4">
-            <h2>Connection to Nature (17.5%)</h2>
+        <div class="rating-card">
+            <h2 style="color:rgb(181, 187, 0)">Connection to Nature (17.5%)</h2>
             <p>The degree of "greenness" the greenspace offers; includes grass and tree coverage, wildlife exposure and
                 conservation</p>
             <div class="star-rating animated-stars">
@@ -87,8 +106,8 @@
           </div>
         
         <!-- Community Consideration -->
-        <div class="rating-card p-4">
-            <h2>Community Consideration (16.3%)</h2>
+        <div class="rating-card">
+            <h2 style="color:rgb(170, 1, 147)">Community Consideration (16.3%)</h2>
             <p>The degree of engagement with the surrounding community; includes the frequency of community events, integration
                 of community input</p>
             <div class="star-rating animated-stars">
@@ -106,8 +125,8 @@
           </div>
         
         <!-- Park Features & Amenities -->
-        <div class="rating-card p-4">
-            <h2>Park Features & Amenities (15.9%)</h2>
+        <div class="rating-card">
+            <h2 style="color:rgb(0, 162, 116)">Park Features & Amenities (15.9%)</h2>
             <p>The quality and variety of the greenspace's amenities; includes bathrooms, benches, sports/exercise areas, trails
                 and other usable public infrastructure</p>
             <div class="star-rating animated-stars">
@@ -123,8 +142,9 @@
                 <label for="pf_star1" class="bi bi-star-fill"></label>
             </div>
           </div>
-        
+        <div class = "general-button">
          <input type="submit" value="Submit">
+         </div>
     </form>
     
 

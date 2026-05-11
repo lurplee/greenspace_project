@@ -59,6 +59,10 @@ def create_app(test_config=None):
     def portfolio():
         return render_template("portfolio.html")
 
+    @app.route("/process", methods = ["GET", "POST"])
+    def process():
+        return render_template("process.html")
+
 
 
     return app

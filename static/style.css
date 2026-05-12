@@ -155,7 +155,7 @@ body {
     background-color: white;
     width: 70%;
     max-width: 900px;
-    margin: 0 auto 10%;
+    margin: 0 auto;
     padding: 2%;
     border-radius: 20px;
 }
@@ -341,7 +341,7 @@ meter {
     text-align:center;
 }
 
-.general-button input:hover, .score-container a:hover , .general-button a{
+.general-button input:hover, .score-container a:hover , .general-button a:hover{
     background-color: #0f4d27;
 }
 
@@ -388,7 +388,7 @@ meter {
 }
 .content-left h2, .content-right h2{
     margin:0;
-    font-size:20px;
+    font-size:17px;
     font-weight:200px !important;
     font-style: italic;
 }

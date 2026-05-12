@@ -345,28 +345,53 @@ meter {
 
 .content-section{
     min-height:200px;
-    width:80%;
+    width:85%;
+    gap:60px;
     margin:auto;
     display:flex;
     flex-direction:row
 }
 
 .content-left{
+    background-color:white;
+    padding:30px;
     display: flex;
     flex-direction: column;
     align-content: left;
-    width: 60%;
+    width: 50%;
     margin: auto;
     border-radius: 20px;
     border: solid rgb(233, 232, 232) 0.5px;
 }
 
+
+
 .content-right{
+    background-color:white;
+    padding:30px;
+    display: flex;
+    flex-direction: column;
+    align-content: right;
+    width: 50%;
+    margin: auto;
+    border-radius: 20px;
+    border: solid rgb(233, 232, 232) 0.5px;
+}
+
+.content-page{
     display:flex;
-    flex-direction:column;
-    align-content:left;
-    width:40%;
-    margin:auto
+    flex-direction: column;
+    gap:40px;
+}
+.content-left h2, .content-right h2{
+    margin:0;
+    font-size:20px;
+    font-weight:200px !important;
+    font-style: italic;
+}
+
+.content-left h1, .content-left h1{
+    margin:0;
 }
 
 

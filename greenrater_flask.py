@@ -69,7 +69,11 @@ def create_app(test_config=None):
     
     @app.route("/background", methods = ["GET", "POST"])
     def background():
-        return render_template("calculation-info.html")
+        return render_template("background.html")
+    
+    @app.route("/research-poster", methods = ["GET", "POST"])
+    def research_poster():
+        return render_template("research-poster.html")
 
 
 

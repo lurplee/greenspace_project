@@ -62,6 +62,14 @@ def create_app(test_config=None):
     @app.route("/process", methods = ["GET", "POST"])
     def process():
         return render_template("process.html")
+    
+    @app.route("/about", methods = ["GET", "POST"])
+    def process():
+        return render_template("about.html")
+    
+    @app.route("/calculation-info", methods = ["GET", "POST"])
+    def process():
+        return render_template("calculation-info.html")
 
 
 

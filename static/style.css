@@ -11,6 +11,22 @@ body {
     padding-bottom:50px;
 }
 
+.center-img{
+    display:flex;
+    flex-direction:row;
+    align-content:center;
+    
+}
+
+.center-img img{
+    margin:0 auto;
+    border-radius:10px;
+    box-shadow: 0 6px 20px rgba(1, 112, 23, 0.556);
+
+    
+
+}
+
 .portfolio-item{
     color:#093902;
     background-color: rgb(247, 255, 247);
@@ -44,6 +60,8 @@ body {
     background-color: #093902;
     padding-right: 20px;
 }
+
+
 
 /* Links inside navbar */
 .navbar a {

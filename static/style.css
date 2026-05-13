@@ -23,7 +23,6 @@ body {
     border-radius:10px;
     box-shadow: 0 6px 20px rgba(1, 112, 23, 0.556);
 
-    
 
 }
 
@@ -365,12 +364,15 @@ meter {
 
 .content-section{
     min-height:200px;
-    width:85%;
+    width:100%;
     gap:60px;
-    margin:auto;
+    box-sizing: border-box;
+    padding: 0 5%;
+    margin: 0 auto;
     display:flex;
     flex-direction:row
 }
+
 
 .content-left{
     background-color:white;
@@ -383,6 +385,44 @@ meter {
     border-radius: 20px;
     border: solid rgb(233, 232, 232) 0.5px;
 }
+
+.content-section-green{
+    min-height:200px;
+    width:100%;
+    gap:60px;
+    box-sizing: border-box;
+    padding: 0 5%;
+    margin: 0 auto;
+    display:flex;
+    flex-direction:row;
+    background-color:#093902;
+}
+.wide-content-left{
+    background-color: #093902;
+    padding:30px;
+    display: flex;
+    flex-direction: column;
+    align-content: left;
+    width: 75%;
+    margin: auto;
+    color:white;
+    border-radius: 20px;
+}
+
+.wide-content-center{
+    text-align:center;
+    color:white;
+    background-color: #093902;
+    padding:30px;
+    display: flex;
+    flex-direction: column;
+    align-content: left;
+    width: 80%;
+    margin: auto;
+    border-radius: 20px;
+}
+
+
 
 
 
@@ -404,18 +444,19 @@ meter {
     gap:40px;
     margin: 0 auto;
 }
-.content-left h2, .content-right h2{
+.content-left h2, .content-right h2, .wide-content-center h2, .wide-content-left h2{
     margin:0;
     font-size:17px;
     font-weight:200px !important;
     font-style: italic;
 }
 
-.content-left h1, .content-right h1{
+
+.content-left h1, .content-right h1, .wide-content-center h1, .wide-content-left h1{
     margin:0;
 }
 
-.content-right h3, .content-left h3{
+.content-right h3, .content-left h3,.wide-content-center h3,.wide-content-left h3{
     font-style:italic;
     padding-top:20px;
     padding-bottom:0px;
@@ -433,6 +474,16 @@ meter {
 
 
 @media screen and (max-width: 768px) {
+
+
+    .content-section{
+        flex-direction:  column;
+    }
+
+    .content-left, .content-right{
+        width:90%;
+    }
+
 
     /* Navbar */
     .navbar {
@@ -465,7 +516,8 @@ meter {
 
     /* Heading */
     .heading h1 {
-        font-size: 32px;
+
+        font-size: 28px;
         padding-top: 30px;
         padding-left: 10px;
         padding-right: 10px;

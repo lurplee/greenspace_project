@@ -419,9 +419,29 @@ meter {
     border-radius: 20px;
 }
 
+.content-right-green{
+    background-color:#093902;
+    padding:30px;
+    display: flex;
+    flex-direction: column;
+    align-content: right;
+    width: 50%;
+    margin: auto;
+    border-radius: 20px;
+}
 
 
 
+.content-left-green{
+    background-color:#093902;
+    padding:30px;
+    display: flex;
+    flex-direction: column;
+    align-content: left;
+    width: 50%;
+    margin: auto;
+    border-radius: 20px;
+}
 
 .content-right{
     background-color:white;

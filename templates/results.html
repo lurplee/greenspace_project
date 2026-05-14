@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GreenRater Results</title>
+    <title>{{park_name.title()}}'s GreenScore | GreenRater</title>
 
     <link rel="icon" type="image/svg+xml" href="static/images/GreenRaterIcon.svg">
     <link rel="stylesheet" href="style.css">
@@ -44,14 +44,14 @@
     </div>
 
     <div class="score-container">
-            <h3>Rating For</h3>
+            <h3>GreenScore</h3>
             <h1>{{park_name}}</h1>
 
 
         <div class="score-card">
 
             <div class="score-title">
-                <p>Weighted Final Score</p>
+                <p>Weighted GreenScore</p>
             </div>
 
             <div class="score-main">
@@ -67,13 +67,17 @@
                 <meter value="{{score}}" max="5" low="1.5" high="3.5" optimum="5"></meter>
             </div>
 
+            <i><p><a href ="about" style="font-size:12px;">Learn More About Scoring Index</a></p></i>
+
         </div>
 
         <div class="breakdown-container">
 
-            <h3 class="breakdown-title">SCORE BREAKDOWN</h3>
+            <div class="breakdown-title">
+               <h3> SCORE BREAKDOWN</h3>
+            </div>
 
-            <div id="breakdown">
+            <div class="breakdown">
 
                 <h2>Accessibility</h2>
                 <meter value="{{score_breakdown['accessibility']}}"></meter>
